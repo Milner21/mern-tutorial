@@ -1,0 +1,38 @@
+.welcome {
+    margin: 1rem;
+}
+.welcome .card-header{
+    padding: 1rem;
+}
+.welcome p {
+    padding-inline-start: 1rem;
+    margin: auto;
+    color: #0d6efd;
+    font-weight: bold;
+    font-size: larger;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .card{
+    margin: 1rem;
+    padding: .5rem;
+    max-width: 500px;
+    width: 100%;
+}
+.goals{
+   max-width: 700px;
+   margin: auto;
+}
+.sinItem{
+    max-width: 700px;
+   margin: auto;
+   text-align: center;
+   margin-top: .5rem;
+   color: #0d6efd;
+}
+.sinItem .card {
+    padding: .5rem;
+}

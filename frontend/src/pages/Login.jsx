@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login, reset } from "../features/auth/authSlice";
 
+import LoginCss from "../css/LoginCss.css";
+
 import Spinner from "../components/Spinner";
 
 function Login() {
@@ -55,51 +57,46 @@ function Login() {
 
   return (
     <>
-      <div className="container text-center pt-2">
-        <section className="heading">
-          <h1>
-            <FaSignInAlt /> Iniciar Sesion
-          </h1>
-          <h4>Ingrese sus datos</h4>
-        </section>
-        <section className="form">
-          <form onSubmit={onSubmit}>
-            <div className="row justify-content-md-center">
-              <div className="col-md-6">
-                <div className="form-group m-2">
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={email}
-                    placeholder={"ingrese su correo"}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="form-group m-2">
-                  <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={password}
-                    placeholder={"ingrese su password"}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <div className="form-group">
-                  <button
-                    type="submit"
-                    className="btn btn-block btn-primary btn-lg "
-                  >
-                    INGRESAR
-                  </button>
-                </div>
+      <div className="loginContainer">
+        <div className="card loginCard">
+          <section className="heading">
+            <h1>
+              <FaSignInAlt /> Iniciar Sesion
+            </h1>
+            <h4>Ingrese sus datos</h4>
+          </section>
+          <section className="form">
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  value={email}
+                  placeholder={"ingrese su correo"}
+                  onChange={handleInputChange}
+                />
               </div>
-            </div>
-          </form>
-        </section>
+              <div className="form-group">
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  value={password}
+                  placeholder={"ingrese su password"}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-group">
+                <button type="submit" className="btn btn-block btn-primary">
+                  INGRESAR
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
       </div>
     </>
   );

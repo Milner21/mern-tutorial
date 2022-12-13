@@ -58,6 +58,7 @@
   }
   .Navbar .rigthSide #hidden {
     position: absolute;
+    z-index: 100;
     padding: 0;
     left: 0;
     top: 50px;

@@ -1,0 +1,23 @@
+.goal {
+  background-color: #68e4fd;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+}
+.goal .fecha {
+  color: white;
+  text-shadow: #000 2px 0 5px;
+}
+.button {
+  font-size: 20px;
+  padding-inline: 0.4rem;
+  padding-bottom: 0.2rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: none;
+  color: #dc3545;
+}
+.button:hover {
+  background-color: #dc3545;
+  color: white;
+}

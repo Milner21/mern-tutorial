@@ -3,12 +3,13 @@ import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../features/auth/authSlice";
+import { reset as resetGoal} from "../features/goals/goalSlice";
 import "./navbar.css";
 
 function Navbar() {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const dispatcch = useDispatch();
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
 
   const onClickShow = () => {
@@ -16,10 +17,11 @@ function Navbar() {
   };
 
   const onLogout = () => {
-    dispatcch(logout());
-    dispatcch(reset());
     navigate("/");
     onClickShow();
+    dispatch(logout());
+    dispatch(reset());
+    dispatch(resetGoal());
   };
 
   return (
